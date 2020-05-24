@@ -5,6 +5,9 @@ using TiegrisUtil.Unit;
 
 namespace TiegrisUtil.Cleanup
 {
+    /// <summary>
+    /// Cleans up you programming project folders, by finding unnecessary folders (eg.: bin, obj)
+    /// </summary>
     public class BinaryCleanup
     {
         private List<DirectoryInfo> results = new List<DirectoryInfo>();
@@ -13,15 +16,29 @@ namespace TiegrisUtil.Cleanup
         public IReadOnlyList<DirectoryInfo> ListAll() => results;
 
         #region contructors
+        /// <summary>
+        /// Recursively searches for folders in the root directory.
+        /// Adds them to a list, if their name matches one of those defined in searchTags.
+        /// </summary>
+        /// <param name="root">The root Directory of the search.</param>
+        /// <param name="searchTags">Look for these folder names.</param>
         public BinaryCleanup(DirectoryInfo root, string[] searchTags) {
             this.searchTags = searchTags;
             search(root);
         }
-
+        /// <summary>
+        /// Recursively searches for folders in the root directory.
+        /// Adds them to a list, if their name matches 'bin' or 'obj'.
+        /// </summary>
+        /// <param name="root">The root Directory of the search.</param>
         public BinaryCleanup(DirectoryInfo root) {
             search(root);
         }
-
+        /// <summary>
+        /// Recursively searches for folders in the root directory.
+        /// Adds them to a list, if their name matches 'bin' or 'obj'.
+        /// </summary>
+        /// <param name="rootPath">The root Directory of the search. Atempts to parse it from string.</param>
         public BinaryCleanup(string rootPath) {
             DirectoryInfo root;
             if (Directory.Exists(rootPath))
