@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TiegrisUtil</name>
+    </assembly>
+    <members>
+        <member name="T:TiegrisUtil.Cleanup.BinaryCleanup">
+            <summary>
+            Cleans up you programming project folders, by finding unnecessary folders (eg.: bin, obj)
+            </summary>
+        </member>
+        <member name="M:TiegrisUtil.Cleanup.BinaryCleanup.#ctor(System.IO.DirectoryInfo,System.String[])">
+            <summary>
+            Recursively searches for folders in the root directory.
+            Adds them to a list, if their name matches one of those defined in searchTags.
+            </summary>
+            <param name="root">The root Directory of the search.</param>
+            <param name="searchTags">Look for these folder names.</param>
+        </member>
+        <member name="M:TiegrisUtil.Cleanup.BinaryCleanup.#ctor(System.IO.DirectoryInfo)">
+            <summary>
+            Recursively searches for folders in the root directory.
+            Adds them to a list, if their name matches 'bin' or 'obj'.
+            </summary>
+            <param name="root">The root Directory of the search.</param>
+        </member>
+        <member name="M:TiegrisUtil.Cleanup.BinaryCleanup.#ctor(System.String)">
+            <summary>
+            Recursively searches for folders in the root directory.
+            Adds them to a list, if their name matches 'bin' or 'obj'.
+            </summary>
+            <param name="rootPath">The root Directory of the search. Atempts to parse it from string.</param>
+        </member>
+        <member name="T:TiegrisUtil.Frameworks.ConsoleProgramFramework">
+            <summary>
+            Provides a framework for short console applications.
+            It can help validate arguments and ask for initial parameters.
+            </summary>
+        </member>
+        <member name="M:TiegrisUtil.Frameworks.ConsoleProgramFramework.#ctor(TiegrisUtil.Frameworks.IConsoleProgramArgsValidator,TiegrisUtil.Frameworks.ConsoleProgramMainDelegate,System.Boolean)">
+            <summary>
+            Provides a framework for short console applications.
+            It can help validate arguments and ask for initial parameters.
+            </summary>
+            <param name="argsValidator">Argument validator class.</param>
+            <param name="main">This function will be the programs body. 
+            After the arguments get validated, this function will be executed once.</param>
+            <param name="waitKeyPress">If true, the program will wait, for a key press after it finished.</param>
+        </member>
+        <member name="T:TiegrisUtil.Frameworks.IConsoleProgramArgsValidator">
+            <summary>
+            Common interface for argument validator classes.
+            </summary>
+        </member>
+        <member name="P:TiegrisUtil.Frameworks.IConsoleProgramArgsValidator.args">
+            <summary>
+            Argument array.
+            </summary>
+        </member>
+        <member name="M:TiegrisUtil.Frameworks.IConsoleProgramArgsValidator.IsValid">
+            <summary>
+            Chechks if the argumets satisfy the requirements.
+            </summary>
+            <returns>true if the arguments satisfy the requirements.</returns>
+        </member>
+        <member name="M:TiegrisUtil.Frameworks.IConsoleProgramArgsValidator.AskForArgs">
+            <summary>
+            This function is called automaticly by the ConsoleProgramFramework until the arguments are valid.
+            It asks for user input, and sets the arguments.
+            </summary>
+        </member>
+    </members>
+</doc>

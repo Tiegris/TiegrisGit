@@ -10,8 +10,8 @@ namespace TiegrisUtil.Cleanup
     /// </summary>
     public class BinaryCleanup
     {
-        private List<DirectoryInfo> results = new List<DirectoryInfo>();
-        private string[] searchTags = new string[] { "bin", "obj" };
+        private readonly List<DirectoryInfo> results = new List<DirectoryInfo>();
+        private readonly string[] searchTags = new string[] { "bin", "obj" };
         public int Count => results.Count;
         public IReadOnlyList<DirectoryInfo> ListAll() => results;
 
