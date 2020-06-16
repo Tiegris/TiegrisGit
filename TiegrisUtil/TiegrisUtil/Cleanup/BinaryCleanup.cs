@@ -119,7 +119,7 @@ namespace TiegrisUtil.Cleanup
         }
 
         private string formatedDouble(double number, int decimals = 2) =>
-            string.Format("{0:N" + Math.Abs(decimals) + "}", number);
+            string.Format("{0:N" + System.Math.Abs(decimals) + "}", number);
         #endregion
     }
 }
