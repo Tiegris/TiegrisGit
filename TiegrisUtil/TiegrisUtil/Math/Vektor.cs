@@ -260,15 +260,15 @@ namespace TiegrisUtil.Math
         /// Converts the Vektor to a string in the format defined by FormatingInfo.OutNumberFormat.
         /// </summary>
         public override string ToString() {
-            return ToString(FormatingInfo.OutNumberFormat);
+            return ToString(FormatingInfo.FormatString, FormatingInfo.NumberFormat);
         }
 
         /// <summary>
         /// Converts the Vektor to a string in the specified format.
         /// </summary>
-        public string ToString(NumberFormatInfo format) {
-            return $@"({x.ToString(format)}; {
-                y.ToString(format)}; {z.ToString(format)})";
+        public string ToString(string formatString, NumberFormatInfo format) {
+            return $@"({x.ToString(formatString, format)}; {
+                y.ToString(formatString, format)}; {z.ToString(formatString, format)})";
         }
 
         /// <summary>

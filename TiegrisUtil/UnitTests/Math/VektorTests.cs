@@ -44,5 +44,14 @@ namespace UnitTests.Math
                 AssertVektorEquals(new Vektor(crossProduct.X, crossProduct.Y, crossProduct.Z), v3);
             }
         }
+
+        [TestMethod]
+        public void ToStringTest() {
+            Vektor v1 = new Vektor(1, 2, 3);
+            Assert.AreEqual("(1; 2; 3)", v1.ToString());
+
+            Vektor v2 = new Vektor(1.5, 2.250001, 3.0625);
+            Assert.AreEqual("(1.5; 2.25; 3.0625)", v2.ToString());
+        }
     }
 }

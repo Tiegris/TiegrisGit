@@ -94,7 +94,7 @@ namespace TiegrisUtil.Math
         /// Converts the Pont to a string in the format defined by FormatingInfo.OutNumberFormat.
         /// </summary>
         public override string ToString() {
-            return ToString(FormatingInfo.OutNumberFormat);
+            return ToString(FormatingInfo.NumberFormat);
         }
 
         /// <summary>
