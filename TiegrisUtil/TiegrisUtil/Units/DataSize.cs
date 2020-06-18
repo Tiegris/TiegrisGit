@@ -1,4 +1,4 @@
-﻿namespace TiegrisUtil.Unit
+﻿namespace TiegrisUtil.Units
 {
     public class DataSize
     {
