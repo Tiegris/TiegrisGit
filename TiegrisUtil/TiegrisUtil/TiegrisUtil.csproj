@@ -58,7 +58,7 @@
     <Compile Include="Math\FormatingInfo.cs" />
     <Compile Include="Math\Pont.cs" />
     <Compile Include="Math\Vektor.cs" />
-    <Compile Include="Cleanup\BinaryCleanup.cs" />
+    <Compile Include="Specific\Cleanup\BinaryCleanup.cs" />
     <Compile Include="Frameworks\ConsoleProgramFramework.cs" />
     <Compile Include="Frameworks\IConsoleProgramArgsValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

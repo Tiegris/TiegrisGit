@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Frameworks.Patterns.CommandBinding
+namespace TiegrisUtil.Frameworks.Patterns.CommandBinding
 {
     public class CommandBinding
     {

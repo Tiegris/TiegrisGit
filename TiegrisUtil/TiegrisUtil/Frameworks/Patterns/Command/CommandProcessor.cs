@@ -2,7 +2,7 @@
 using System.Linq;
 using TiegrisUtil.Collections;
 
-namespace Frameworks.Patterns.Command
+namespace TiegrisUtil.Frameworks.Patterns.Command
 {
     public class CommandProcessor
     {

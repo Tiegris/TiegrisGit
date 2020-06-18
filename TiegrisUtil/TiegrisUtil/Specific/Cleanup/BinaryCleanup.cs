@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using TiegrisUtil.Unit;
 
-namespace TiegrisUtil.Cleanup
+namespace TiegrisUtil.Specific.Cleanup
 {
     /// <summary>
     /// Cleans up you programming project folders, by finding unnecessary folders (eg.: bin, obj)

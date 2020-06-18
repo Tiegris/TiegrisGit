@@ -1,4 +1,4 @@
-﻿namespace Frameworks.Patterns.Command
+﻿namespace TiegrisUtil.Frameworks.Patterns.Command
 {
     /// <summary>
     /// Command-ok ősosztálya.

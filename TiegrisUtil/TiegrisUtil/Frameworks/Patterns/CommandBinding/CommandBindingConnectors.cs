@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Frameworks.Patterns.CommandBinding
+namespace TiegrisUtil.Frameworks.Patterns.CommandBinding
 {
 
     /// <summary>
