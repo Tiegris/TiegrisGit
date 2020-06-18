@@ -49,13 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\AgingStack.cs" />
+    <Compile Include="CulturedFormating\Parser.cs" />
+    <Compile Include="Frameworks\Notifications\Notifications.cs" />
     <Compile Include="Frameworks\Patterns\CommandBinding\CommandBinding.cs" />
     <Compile Include="Frameworks\Patterns\CommandBinding\CommandBindingConnectors.cs" />
     <Compile Include="Frameworks\Patterns\CommandBinding\CommandBindingManager.cs" />
     <Compile Include="Frameworks\Patterns\Command\Command.cs" />
     <Compile Include="Frameworks\Patterns\Command\CommandProcessor.cs" />
     <Compile Include="Math\CsMath.cs" />
-    <Compile Include="Math\FormatingInfo.cs" />
+    <Compile Include="CulturedFormating\FormatingInfo.cs" />
     <Compile Include="Math\Pont.cs" />
     <Compile Include="Math\Vektor.cs" />
     <Compile Include="Specific\Cleanup\BinaryCleanup.cs" />

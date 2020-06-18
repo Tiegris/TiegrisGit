@@ -14,7 +14,7 @@
         public long TiB => GiB / 1024;
 
         private static readonly string[] units = 
-            { "B", "kiB", "MiB", "GiB", "TiB" , "PiT"};
+            { "B", "kiB", "MiB", "GiB", "TiB" , "PiB"};
         private static readonly string[] unitsLong =
             { "Byte", "kiloByte", "MegaByte", "GigaByte", "TeraByte", "PetaByte"};
 

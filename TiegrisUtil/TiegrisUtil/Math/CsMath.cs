@@ -21,5 +21,23 @@ namespace TiegrisUtil.Math
             a %= m;
             return a<0 ? a+m : a;
         }
+
+        /// <summary>
+        /// Converts a degree value to radians.
+        /// </summary>
+        /// <param name="degrees">Angle in degrees.</param>
+        /// <returns>Angle in radians.</returns>
+        static public double ToRadian(double degrees) {
+            return degrees * System.Math.PI / 180.0;
+        }
+
+        /// <summary>
+        /// Converts a radian value to degrees.
+        /// </summary>
+        /// <param name="radians">Angle in radians</param>
+        /// <returns>Angle in degrees..</returns>
+        static public double ToDegree(double radians) {
+            return radians / System.Math.PI * 180.0;
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TiegrisUtil.CulturedFormating;
 
 namespace TiegrisUtil.Math
 {
@@ -94,13 +95,13 @@ namespace TiegrisUtil.Math
         /// Converts the Pont to a string in the format defined by FormatingInfo.OutNumberFormat.
         /// </summary>
         public override string ToString() {
-            return ToString(FormatingInfo.NumberFormat);
+            return ToString(FormatingInfo.CultureInfo);
         }
 
         /// <summary>
         /// Converts the Pont to a string in the specified format.
         /// </summary>
-        public string ToString(NumberFormatInfo format) {
+        public string ToString(IFormatProvider format) {
             return $@"({X.ToString(format)}; {Y.ToString(format)})";
         }
     }

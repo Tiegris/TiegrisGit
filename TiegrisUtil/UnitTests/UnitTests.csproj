@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\AgingStackTests.cs" />
+    <Compile Include="CulturedParsing\ParserTests.cs" />
     <Compile Include="Math\PontTests.cs" />
     <Compile Include="Math\CsMathTests.cs" />
     <Compile Include="Math\VektorTests.cs" />

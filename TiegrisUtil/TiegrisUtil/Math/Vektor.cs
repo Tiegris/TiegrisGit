@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TiegrisUtil.CulturedFormating;
 
 namespace TiegrisUtil.Math
 {
@@ -160,7 +161,6 @@ namespace TiegrisUtil.Math
                 );
         }
 
-
         private static void rotate(ref double x, ref double y, double beta) {
             double temp_x = x * System.Math.Cos(beta) - y * System.Math.Sin(beta);
             y = x * System.Math.Sin(beta) + y * System.Math.Cos(beta);
@@ -260,13 +260,13 @@ namespace TiegrisUtil.Math
         /// Converts the Vektor to a string in the format defined by FormatingInfo.OutNumberFormat.
         /// </summary>
         public override string ToString() {
-            return ToString(FormatingInfo.FormatString, FormatingInfo.NumberFormat);
+            return ToString(FormatingInfo.NumberFormatString, FormatingInfo.CultureInfo);
         }
 
         /// <summary>
         /// Converts the Vektor to a string in the specified format.
         /// </summary>
-        public string ToString(string formatString, NumberFormatInfo format) {
+        public string ToString(string formatString, IFormatProvider format) {
             return $@"({x.ToString(formatString, format)}; {
                 y.ToString(formatString, format)}; {z.ToString(formatString, format)})";
         }
