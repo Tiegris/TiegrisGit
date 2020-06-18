@@ -15,7 +15,8 @@ namespace UnitTests.Math
 
         [TestMethod]
         public void TestMethod1() {
-
+            //TODO: Implement Pont tests.
+            Assert.Fail("Tests not implemented");
         }
     }
 }
