@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Collections\AgingStack.cs" />
     <Compile Include="CulturedFormating\Parser.cs" />
+    <Compile Include="CulturedFormating\TupleParser.cs" />
     <Compile Include="Frameworks\Notifications\Notifications.cs" />
     <Compile Include="Frameworks\Patterns\CommandBinding\CommandBinding.cs" />
     <Compile Include="Frameworks\Patterns\CommandBinding\CommandBindingConnectors.cs" />

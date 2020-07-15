@@ -36,5 +36,7 @@ namespace TiegrisUtil.CulturedFormating
             return DateTime.ParseExact(s, FormatingInfo.DateFormatString, FormatingInfo.CultureInfo);
         }
 
+        static public int ToInt(string s) => int.Parse(s);        
+
     }
 }
