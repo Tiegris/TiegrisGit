@@ -62,12 +62,26 @@ namespace UnitTests.Collections
         }
 
         [TestMethod]
-        public void TestMethod1_Emtpy() {
+        public void TestMethod_Emtpy() {
             AgingStack<int> agingStack = new AgingStack<int>(2);
             assertEmpty(agingStack);
             agingStack.Push(1);
             agingStack.Push(2);
 
+            Assert.AreEqual(2, agingStack.Pop());
+            Assert.AreEqual(1, agingStack.Pop());
+
+            assertEmpty(agingStack);
+        }
+
+        [TestMethod]
+        public void TestMethod_Peek() {
+            AgingStack<int> agingStack = new AgingStack<int>(2);
+            agingStack.Push(1);
+            agingStack.Push(2);
+
+            Assert.AreEqual(2, agingStack.Peek());
+            Assert.AreEqual(2, agingStack.Peek());
             Assert.AreEqual(2, agingStack.Pop());
             Assert.AreEqual(1, agingStack.Pop());
 

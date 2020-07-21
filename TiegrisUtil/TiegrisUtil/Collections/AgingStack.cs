@@ -18,7 +18,7 @@ namespace TiegrisUtil.Collections
         /// <summary>
         /// Creates a new instance if AgingStack with a given length.
         /// </summary>
-        /// <param name="size"></param>
+        /// <param name="size">Maximum size of the stack.</param>
         public AgingStack(int size) {
             elements = new T[size];
             top = 0;
@@ -51,13 +51,23 @@ namespace TiegrisUtil.Collections
         /// <summary>
         /// Returnes, than removes the youngest element of the stack.
         /// </summary>
-        /// <returns></returns>
         public T Pop() {
             if (!HasAny)
-                throw new Exception("The AgingStack is empty.");
+                throw new IndexOutOfRangeException("The AgingStack is empty.");
             count--;
             decr(ref top);
             return elements[top];
+        }
+
+        /// <summary>
+        /// Returnes the youngest element of the stack.
+        /// </summary>
+        public T Peek() {
+            if (!HasAny)
+                throw new IndexOutOfRangeException("The AgingStack is empty.");
+            int tmp = top;
+            decr(ref tmp);
+            return elements[tmp];
         }
 
         /// <summary>
@@ -75,7 +85,7 @@ namespace TiegrisUtil.Collections
         public bool HasAny => (count > 0);
 
         /// <summary>
-        /// Gets the number of elements in the stack.
+        /// Gets the number of elements stored in the stack.
         /// </summary>
         public int Count => count;
 
