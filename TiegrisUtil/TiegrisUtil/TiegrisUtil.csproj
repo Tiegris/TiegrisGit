@@ -57,6 +57,7 @@
     <Compile Include="Frameworks\Patterns\CommandBinding\CommandBindingManager.cs" />
     <Compile Include="Frameworks\Patterns\Command\Command.cs" />
     <Compile Include="Frameworks\Patterns\Command\CommandProcessor.cs" />
+    <Compile Include="Frameworks\SpecialPaths.cs" />
     <Compile Include="Math\CsMath.cs" />
     <Compile Include="CulturedFormating\FormatingInfo.cs" />
     <Compile Include="Math\Pont.cs" />
